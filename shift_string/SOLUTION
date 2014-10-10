@@ -1,0 +1,9 @@
+left/right shift string.
+
+e.g. n=8 and i=3, "abcdefgh" => "defghabc"
+
+
+algorithm:
+reverse(0,i-1)  (=> cbadefgh)
+reverse(i,n-1)  (=> cbahgfed)
+reverse(0,n-1)  (=> defghabc)
