@@ -3,7 +3,13 @@ left/right shift string.
 e.g. n=8 and i=3, "abcdefgh" => "defghabc"
 
 
-algorithm:
+algorithm 1 (strshift.c):
 reverse(0,i-1)  (=> cbadefgh)
 reverse(i,n-1)  (=> cbahgfed)
 reverse(0,n-1)  (=> defghabc)
+
+algorithm 2 (strshift2.c):
+k = 0; save str[0] to temp, move str[3] to str[0], str[6] to str[3], str[0] to str[6]
+k = 1; save str[1] to temp, move str[4] to str[1], str[7] to str[4], str[1] to str[7]
+k = 2; save str[2] to temp, move str[5] to str[2], str[8] to str[5], str[2] to str[8]
+

@@ -1,19 +1,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
-char mystr[] = "abcdefgh";
-char sft_idx = 3;
+#include "strshift.h"
 
 static void reverseStr(int begin, int end);
 
 int main() {
+    printf("Goal: left shift \"%s\" by %d position using algorithm 1\n", mystr, sft_idx);
+    printf("String before shift is : %s\n", mystr);
     if (sft_idx > strlen(mystr)) {
         fprintf(stderr, "Shift Index can NOT be larger than string length.\n");
         return 0;
-    }
-    printf("Goal: left shift \"%s\" by %d position\n", mystr, sft_idx);
-    printf("String before shift is : %s\n", mystr);
+    } else if (sft_idx == strlen(mystr)) {        
+        printf("String after  shift is : %s\n", mystr);
+        return 0;
+    } 
 
     reverseStr(0, sft_idx-1);
     reverseStr(sft_idx,strlen(mystr)-1);
